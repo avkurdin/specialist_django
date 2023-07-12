@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-   <h2> {{ item.name }}</h2>
-  <div>Количество: {{ item.quantity }}</div>
-    <li><a href="/items">Список товаров</a></li>
+
 </head>
 <body>
+    <header>
+      / <a href="/">Home</a> / <a href="/items">Items</a> / <a href="/about">About</a>
+    </header>
+
+    <h2> {{ item.name }}</h2>
+    <div>Количество: {{ item.quantity | default:"Товар отсутствует на складе" }}</div>
+
+    <li><a href="/items">Список товаров</a></li>
 
 </body>
 </html>
